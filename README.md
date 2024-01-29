@@ -4,6 +4,8 @@
 
 ## Welcome! 👋
 
+##<h2>Live Demo</h2> <h3>[FAQ accordion](https://hilla10.github.io/faq-accordion-main/)</h3>
+
 Thanks for checking out this front-end coding challenge.
 
 [Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
