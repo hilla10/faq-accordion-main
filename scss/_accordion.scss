@@ -1,0 +1,85 @@
+.accordion {
+
+    .accordion-header {
+        position: relative;
+        cursor: pointer;
+        padding-bottom: rem(30);
+        transition: all 0.6s ease-in-out;
+
+
+        h2 {
+            position: absolute;
+            left: 0;
+            top: 3px;
+            transition: color .5s ease-in-out;
+            padding-right: rem(20);
+
+
+            &:hover {
+
+                h2 {
+                    color: #a139d4;
+                }
+            }
+
+            .icon {
+                position: absolute;
+                right: 0;
+                top: 3px;
+                background: url(../assets/images/icon-plus.svg);
+                background-repeat: no-repeat;
+                width: rem(30);
+                height: rem(30);
+                transition: all 0.6s ease-in-out;
+
+                @include breakpointDown (mobile) {
+                    top: 9px;
+                    right: -7px;
+                }
+            }
+        }
+
+        &:nth-child(3) h2 {
+            @include breakpointDown(mobile) {
+                top: -20px;
+            }
+        }
+    }
+
+    .accordion-item.active .accordion-header {
+
+        .icon {
+            background: url(../assets/images/icon-minus.svg);
+            background-repeat: no-repeat;
+        }
+    }
+
+
+    .accordion-content {
+        margin: rem(24) 0;
+        max-height: 0;
+        overflow: hidden;
+        border-bottom: 2px solid $LightPink;
+        transition: max-height 0.6s ease-in-out, padding-bottom 0.6s ease-in-out;
+
+        @include breakpoint(mobile) {
+            margin: rem(30) 0;
+        }
+
+        p {
+            font-size: rem(14);
+            font-weight: 600;
+            color: $GrayishPurple;
+
+            @include breakpoint(mobile) {
+                font-size: 1rem;
+            }
+        }
+    }
+
+    .accordion-item.active .accordion-content {
+        max-height: rem(200);
+        padding-bottom: 2.2rem;
+    }
+
+}

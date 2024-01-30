@@ -1,0 +1,53 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+    background: $LightPink;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    line-height: 1.29;
+}
+
+h1 {
+    font-size: rem(32);
+    display: flex;
+    align-items: center;
+    padding-bottom: 15px;
+    font-weight: 700;
+
+    @include breakpoint(mobile) {
+        font-size: rem(56);
+        padding-bottom: rem(31);
+    }
+}
+
+h2 {
+    font-size: 1rem;
+    padding-right: 45px !important;
+
+    @include breakpoint(mobile) {
+        font-size: rem(18);
+        font-weight: 600;
+    }
+
+
+}
+
+img {
+    margin-right: 1.5rem;
+    width: 24px;
+
+    @include breakpoint(mobile) {
+        padding-right: rem(24);
+    }
+
+}
