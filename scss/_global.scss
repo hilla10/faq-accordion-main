@@ -47,7 +47,30 @@ img {
     width: 24px;
 
     @include breakpoint(mobile) {
-        padding-right: rem(24);
+        margin-right: rem(24);
+        width: auto;
     }
 
+}
+
+
+
+footer {
+    position: relative;
+    bottom: -530px;
+    margin-top: rem(40);
+    padding: rem(40);
+    text-align: center;
+    background: $DarkPurple;
+    width: 100%;
+    color: #fff;
+
+    a {
+        color: #fff;
+        transition: color 0.5s ease;
+
+        &:hover {
+            color: #ccc;
+        }
+    }
 }
